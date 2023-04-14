@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encriptación de texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            margin: 50px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Encriptación de texto</h1>
+    <form>
+        <label><input type="radio" name="action" value="encrypt" checked>Encriptar</label>
+        <label><input type="radio" name="action" value="decrypt">Desencriptar</label>
+        <label><input type="text" name="text" placeholder="Ingresa el texto aquí"></label>
+        <button type="button" onclick="process()">Procesar</button>
+        <label><input type="text" name="result" placeholder="Resultado" readonly></label>
+        <button type="button" onclick="copy()">Copiar</button>
+    </form>
+
+    <script>
+        function process() {
+            var action = document.querySelector('input[name="action"]:checked').value;
+            var text = document.querySelector('input[name="text"]').value;
+            var result = "";
+            if (action === "encrypt") {
+                result = encrypt(text);
+            } else {
+                result = decrypt(text);
+            }
+            document.querySelector('input[name="result"]').value = result;
+        }
+
+        function encrypt(text) {
+            text = text.toLowerCase();
+            text = text.replace(/e/g, "enter");
+            text = text.replace(/i/g, "imes");
+            text = text.replace(/a/g, "ai");
+            text = text.replace(/o/g, "ober");
+            text = text.replace(/u/g, "ufat");
+            return text;
+        }
+
+        function decrypt(text) {
+            text = text.toLowerCase();
+            text = text.replace(/enter/g, "e");
+            text = text.replace(/imes/g, "i");
+            text = text.replace(/ai/g, "a");
+            text = text.replace(/ober/g, "o");
+            text = text.replace(/ufat/g, "u");
+            return text;
+        }
+
+        function copy() {
+            var resultField = document.querySelector('input[name="result"]');
+            resultField.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+
+</html>

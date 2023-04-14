@@ -27,12 +27,14 @@
 
             <div class="left-content">
                 <div class="main-content">
-                    <label for="texto">Ingresa tu texto aqui</label><br>
-                    <textarea id="campo-transparente" name="write" rows="30" cols="90"></textarea>
+                    <br />
+                    <h2>Ingresa tu texto aqui</h2><br>
+                    <textarea id="campo-transparente" name="write" rows="30" cols="130"></textarea>
                     <br>
                     <div class="buttons-panel">
+                        <br />
                         <button onclick="encriptar()" class="encrypting"> Encriptar </button>
-                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button onclick="desencriptar()" class="decrypting"> Desencriptar </button>
                     </div>
 
@@ -41,10 +43,19 @@
         </div>
         <div class="rigth-section">
             <div class="rigth-content">
-                <img src="imagenes/encriptadog.webp" alt="dog" class="image">
-            <div>
-                <p><bold>Ningún mensaje fue encontrado</bold></p>
-            </div>
+                <div class="hidden">
+                    <img src="imagenes/encriptadog.webp" alt="dog" class="image hidden">
+            
+                    <p class="no-message"><strong>Ningún mensaje fue encontrado</strong></p>
+                </div>
+                <div class="rigth-content-main"><br>
+                    <h2>Texto desencriptado</h2>
+                    <textarea id="campo-transparente" name="write" rows="30" cols="60"></textarea>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button onclick="encriptar()" class="encrypting"> Encriptar </button>
+                </div>
+
+            
             </div>
 
         </div>
