@@ -30,24 +30,13 @@ function encriptar(texto) {
 }
 
 function desencriptar(texto) {
-  var desencriptado = "";
-  for (var i = 0; i < texto.length; i++) {
-    var letra = texto[i];
-    if (letra === "enter") {
-      desencriptado += "e";
-    } else if (letra === "imes") {
-      desencriptado += "i";
-    } else if (letra === "ai") {
-      desencriptado += "a";
-    } else if (letra === "ober") {
-      desencriptado += "o";
-    } else if (letra === "ufat") {
-      desencriptado += "u";
-    } else {
-      desencriptado += letra;
-    }
-  }
-  return desencriptado;
+  texto = texto.toLowerCase();
+  texto = texto.replace(/enter/g, "e");
+  texto = texto.replace(/imes/g, "i");
+  texto = texto.replace(/ai/g, "a");
+  texto = texto.replace(/ober/g, "o");
+  texto = texto.replace(/ufat/g, "u");
+  return texto;
 }
 
 function procesoEncriptar() {
@@ -61,15 +50,32 @@ function procesoEncriptar() {
   }
 
   var textoEncriptado = encriptar(textoAEncriptar.value);
-  var resultadoTextArea = document.getElementById("resultado"); 
-  resultadoTextArea.value = textoEncriptado
-} 
+  var resultadoTextArea = document.getElementById("resultado");
+  resultadoTextArea.value = textoEncriptado;
+  textoAEncriptar.value = "";
+}
 
-function procesoCopiar(){
+function procesoCopiar() {
   var resultField = document.getElementById("resultado");
-			resultField.select();
-			document.execCommand("copy"); 
-      console.log("Llamando funcion resultado")
+  resultField.select();
+  document.execCommand("copy");
+  mostrarImagen();
 
-} 
+
+}
+
+function procesoDesencriptar() {
+  var desencriptado = document.getElementById("campo-transparente");
+  if (desencriptado.value == "") {
+    alert("Ingresa una palabra, frase o texto a desencriptar :)")
+    return;
+  }
+
+  var textoDesencriptado = desencriptar(desencriptado.value);
+ // alert("Texto desencriptado " + textoDesencriptado) 
+ desencriptado.value=textoDesencriptado;
+
+}
+
+
 

@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Exo:wght@300&family=IBM+Plex+Sans:wght@200;700&family=Montserrat:wght@300&family=Rammetto+One&family=Saira+Condensed:wght@300&display=swap"
         rel="stylesheet"> 
         <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
         <script src="main.js"></script>
         <title>Encriptadog</title>
 </head>
@@ -32,12 +33,12 @@
                     <br />
                     <h2>Ingresa tu texto aqui</h2><br>
                     <textarea id="campo-transparente" name="write" rows="25" cols="110"></textarea>
-                    <br>
+
                     <div class="buttons-panel">
-                        <br />
+                        <p><i class="fi fi-rr-paw">&nbsp;</i>Sólo letras minúsculas y sin acentos</p>
                         <button onclick="procesoEncriptar()" class="encrypting"> Encriptar </button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button onclick="mostrarTexto()" class="decrypting"> Desencriptar </button>
+                        <button onclick="procesoDesencriptar()" class="decrypting"> Desencriptar </button>
                     </div>
 
                 </div>
@@ -45,14 +46,14 @@
         </div>
         <div class="rigth-section">
             <div class="rigth-content">
-                <div class="hidden" id="encription-not-found">
+                <div class="" id="encription-not-found">
                     <img src="imagenes/encriptadog.webp" alt="dog" class="image">
             
                     <p class="no-message"><strong>Ningún mensaje fue encontrado</strong></p>
                 </div>
-                <div class="rigth-content-main" id="encription-found"><br>
-                    <h2>Resultado</h2>
-                    <textarea id="resultado" name="write" rows="25" cols="50"></textarea>
+                <div class="rigth-content-main hidden" id="encription-found"><br>
+            
+                    <textarea readonly id="resultado" name="write" rows="25" cols="50"></textarea>
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button onclick="procesoCopiar()" class="encrypting"> Copiar </button>
                 </div>
@@ -62,7 +63,10 @@
 
         </div>
     </div>
-
+<footer>
+    <p> Desarrollado</p>
+   
+</footer>
 </body>
 
 </html>

@@ -5,6 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Rammetto One', cursive;
     font-family: 'Saira Condensed', sans-serif;
+    background-color:  rgb(245, 240, 179);
 } 
 
 .caja{
@@ -16,12 +17,12 @@ body {
 .main {
     width: 100%;
     height: 100%;
-    background: rgb(240, 240, 193);
+    /*background: rgb(240, 240, 193);*/
     display: block;
 }
 
 .main-content {
-    background-color: coral;
+   /* background-color: coral;*/
     margin: 100px;
     width: 80%;
     height: 80vh;
@@ -30,7 +31,7 @@ body {
 
 
 .left-section {
-    background-color: cadetblue;
+  /*  background-color: cadetblue;*/
     width: 69%;
     height: 100vh;
     display: inline-block;
@@ -38,7 +39,7 @@ body {
 }
 
 .rigth-section {
-    background-color: rgb(216, 247, 247);
+   /* background-color: rgb(216, 247, 247);*/
     width: 30%;
     height: 100vh;
     display: inline-block; 
@@ -62,7 +63,7 @@ body {
 }
 
 .left-header {
-    background-color: rgb(222, 249, 152);
+   /* background-color: rgb(222, 249, 152);*/
     width: 69%;
     height: 10vh;
     display: inline-block;
@@ -87,7 +88,7 @@ body {
 } 
 
 .title{
-    color: rgb(96, 138, 245); 
+   /* color: rgb(96, 138, 245); */
     font-size: 35px;
     position: absolute;
 }  
@@ -97,7 +98,7 @@ body {
 }
 
 .encrypting{
-   background-color: rgb(247, 199, 243);
+    background-color: rgb(247, 199, 243);
     border-radius: 6px;
     width: 200px;
     height: 35px;
@@ -112,7 +113,7 @@ body {
 } 
 
 .buttons-panel{
-    background-color: rgb(246, 166, 166);
+   /* background-color: rgb(246, 166, 166);*/
     width: 70%;
     height: 15vh; 
     margin-left: 10%;
