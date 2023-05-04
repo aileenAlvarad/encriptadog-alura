@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Exo:wght@300&family=IBM+Plex+Sans:wght@200;700&family=Montserrat:wght@300&family=Rammetto+One&family=Saira+Condensed:wght@300&display=swap"
+    rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/39fb1dec3d.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+
+    .header {
+      color: #ffffff;
+
+    }
+
+    .aside {
+      background-color: #ffffff;
+      padding: 15px;
+      color: #373434;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+      border-radius: 20px;
+      height: 630px;
+    }
+
+    .footer {
+      background-color: #d69e2d;
+      color: #0d0c0c;
+      text-align: center;
+      font-size: 18px;
+      padding: 6px;
+      margin-top: 10px;
+    }
+
+    /* For desktop: */
+    .col-1 {
+      width: 8.33%;
+    }
+
+    .col-2 {
+      width: 16.66%;
+    }
+
+    .col-3 {
+      width: 25%;
+    }
+
+    .col-4 {
+      width: 33.33%;
+    }
+
+    .col-5 {
+      width: 41.66%;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+
+    .col-7 {
+      width: 58.33%;
+    }
+
+    .col-8 {
+      width: 66.66%;
+    }
+
+    .col-9 {
+      width: 75%;
+    }
+
+    .col-10 {
+      width: 83.33%;
+    }
+
+    .col-11 {
+      width: 91.66%;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+
+    .padding {
+      padding-left: 50px;
+      padding-right: 60px;
+      padding-top: 10px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .center1 {
+      margin: auto;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .center2 {
+      text-align: center;
+      border: 3px solid green;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="col-"] {
+        width: 100%;
+      }
+    }
+
+    /*Pantallas muy grandes  (desktops de más de 1200px de ancho)
+//No hace falta media-query porque será nuestro diseño por defecto
+
+//Pantallas grandes (desktops de menos de 1200px)
+@media (max-width: 1199.98px) { ... }
+
+//Pantallas medianas (tablets de menos de 992px)
+@media (max-width: 991.98px) { ... }
+
+//Pantallas pequeñas (móviles en landscape de menos de 768px)
+@media (max-width: 767.98px) { ... }
+
+//Pantallas muy pequeñas (móviles en portrait de menos de 576px)
+@media (max-width: 575.98px) { ... }*/
+
+    @media screen and (max-height: 799px) {
+      .aside {
+        height: 400px !important;
+      } 
+      .text-aside {
+        padding-top: 1px !important;
+      }
+
+      .campo-transparente {
+        height: 300px !important;
+      }
+    }
+
+    .title2 {
+      color: rgb(224, 161, 60);
+      font-size: 35px;
+
+    }
+
+    .encrypting:hover {
+      background-color: rgb(252, 174, 90);
+      border-radius: 6px;
+      width: 200px;
+      height: 35px;
+      font-size: 16px;
+      font-family: 'Lucida Sans'; 
+      box-shadow: inset 0 0 20px rgba(235, 168, 32, 0.5), 0 0 20px rgba(229, 148, 35, 0.4);
+      outline-color: rgba(238, 192, 84, 0);
+      outline-offset: 80px;
+      text-shadow: 1px 1px 6px #fff;
+ 
+}
+    
+
+    .decrypting:hover {
+      background-color: rgb(246, 211, 158);
+      border-radius: 6px;
+      width: 200px;
+      height: 35px;
+      font-size: 16px;
+      font-family: 'Lucida Sans'; 
+      box-shadow: inset 0 0 20px rgba(247, 195, 92, 0.5), 0 0 20px rgba(246, 176, 79, 0.4);
+      outline-color: rgba(238, 192, 84, 0);
+      outline-offset: 80px;
+      text-shadow: 1px 1px 6px #fff;
+    }
+
+    .campo-transparente {
+      background: transparent;
+      border: none;
+      font-size: 19px;
+      border: none;
+      outline: 0;
+      height: 600px;
+      width: 80%; 
+      caret-color: #d09006; 
+      text-transform: lowercase; 
+      font-size: 25px;
+
+    } 
+
+    .text-aside{
+      padding-top: 60px ;  
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1 class="title2"><img src="imagenes/logo.png" height="50px" style="margin:0px; padding: 0px"><img> Encriptadog
+    </h1>
+  </div>
+
+  <div class="row">
+    <div class="col-2 ">
+      <span></span>
+    </div>
+
+    <div class="col-6">
+      <input type="text" class="campo-transparente" id="ingresa-texto" name="write" placeholder="Ingresa tu texto aqui">
+   
+      <span><br><i class="fi fi-rr-paw">&nbsp;&nbsp;</i>Sólo letras minúsculas y sin acentos <br>
+        <button type="button" onclick="procesoEncriptar()" class="padding encrypting">Encriptar</button> &nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="procesoDesencriptar()" class="padding decrypting">Desencriptar</button>
+      </span>
+    </div>
+
+    <div class="col-4 ">
+      <div class="aside" id="encription-not-found">
+        <img src="imagenes/encriptadog.webp" alt="dog" style="width: 50%;">
+        <span class="no-message text-aside"><strong>Ningún mensaje fue encontrado</strong></span>
+        <span class="ingresar-text text-aside">Ingresa el texto que desees encriptar
+          o desencriptar</span> 
+      </div>
+      
+      <div class="aside hidden" id="encription-found">
+          <input type="text" class="campo-transparente"  id="resultado" name="write">
+        <span class=""><button type="button" class="padding encrypting" onclick="procesoCopiar()">Copiar</button>
+      </div>
+
+      <br> 
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      Desarrollado por Aileen Alvarado.
+
+      <a href="https://github.com/aileenAlvarad" class="github iconos"><i class="fa-brands fa-github fa-xl"
+        style="color: #0c0c0c;"></i></a>
+    <a href="https://www.linkedin.com/in/aileen-alvarado/" class="linkedin iconos"><i
+        class="fa-brands fa-linkedin-in fa-xl" style="color: #040404;"></i></a>
+
+    </p>
+    
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -41,10 +41,9 @@ function desencriptar(texto) {
 
 function procesoEncriptar() {
   // SI el input area esta vacio mostramos al perrito 
-  var textoAEncriptar = document.getElementById("ingresa-texto")
+  var textoAEncriptar = document.getElementById("campo-transparente")
   if (textoAEncriptar.value == "") {
     mostrarImagen()
-    swal("Ingresa un texto :)");
     return;
   } else {
     mostrarTexto()
@@ -66,7 +65,7 @@ function procesoCopiar() {
 }
 
 function procesoDesencriptar() {
-  var desencriptado = document.getElementById("resultado");
+  var desencriptado = document.getElementById("campo-transparente");
   if (desencriptado.value == "") {
     alert("Ingresa una palabra, frase o texto a desencriptar :)")
     return;
