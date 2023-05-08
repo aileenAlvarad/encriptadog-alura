@@ -66,15 +66,17 @@ function procesoCopiar() {
 }
 
 function procesoDesencriptar() {
+  var inputPrincipal = document.getElementById("ingresa-texto");
   var desencriptado = document.getElementById("resultado");
-  if (desencriptado.value == "") {
-    alert("Ingresa una palabra, frase o texto a desencriptar :)")
+  if (desencriptado.value == "" && inputPrincipal.value == "") {
+    swal("Ingresa un texto para desencriptar :)");
     return;
   }
 
-  var textoDesencriptado = desencriptar(desencriptado.value);
- // alert("Texto desencriptado " + textoDesencriptado) 
- desencriptado.value=textoDesencriptado;
+  var textoDesencriptado = desencriptar(desencriptado.value); 
+  var textoDesencriptado2 = desencriptar(inputPrincipal.value);
+  inputPrincipal.value = textoDesencriptado2;
+  desencriptado.value = textoDesencriptado;
 
 }
 
