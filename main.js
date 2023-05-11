@@ -61,7 +61,7 @@ function procesoCopiar() {
   resultField.select();
   document.execCommand("copy");
   mostrarImagen();
-
+  resultField.value ="";
 
 }
 
